@@ -50,6 +50,7 @@ public class SequenceStats {
 		int[] sampleArray = new int[]{
 				4, 5, 7, 8, 1, -6, 5
 		};
+		System.out.println(Arrays.toString(sampleArray));
 		Arrays.stream(sampleArray).forEach(stats::put);
 		System.out.println("Сумма всех элементов массива: " + stats.getSum());
 		System.out.println("Минимальное значение среди всех элементов массива: " + stats.getMin());
