@@ -1,0 +1,26 @@
+public void deleteDuplicates() {
+    if (head == null) return;
+
+    ListItem current = head;
+    // Проходимся по связному списку
+    while (current != null) {
+        ListItem nextNode = current.next;
+
+        // Если у следующей ноды такое же значение, как у текущей -> пропускаем её.
+        while (nextNode != null && current.value == nextNode.value) {
+            nextNode = nextNode.next;
+            // Не забываем уменьшить размер,
+            // так как эффективно связный список уменьшился на 1 элемент
+            size--;
+        }
+
+        // Делаем следующую ноду у текущей - уникальной где-то впереди идущей нодой.
+        current.next = nextNode;
+
+        // Если дошли до конца списка -> устанавливаем хвост
+        if (nextNode == null) tail = current;
+
+        // Перемещаемся на следующую уникальную ноду (переходим к следующей итерации)
+        current = current.next;
+    }
+}
