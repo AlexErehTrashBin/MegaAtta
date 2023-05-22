@@ -1,5 +1,6 @@
 package timecomplexity;
 
+import java.util.Arrays;
 import java.util.HashSet;
 import java.util.Set;
 
@@ -22,10 +23,15 @@ public class UniqueStrings {
 	 * Получившийся размер множества и есть количество уникальных строк в переданном массиве.
 	 * */
 	public static int countUniqueStrings(String[] strings) {
-		Set<String> uniqueStrings = new HashSet<>();
-		for (String str : strings) {
-			uniqueStrings.add(str);
-		}
+		Set<String> uniqueStrings = new HashSet<>(Arrays.asList(strings));
 		return uniqueStrings.size();
+	}
+
+	public static void main(String[] args) {
+		String[] sampleArr = new String[]{
+				"bruh", "nruh", "bruh", "lol", "omg"
+		};
+		int unique = countUniqueStrings(sampleArr);
+		System.out.println("Уникальных строк: " + unique);
 	}
 }
