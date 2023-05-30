@@ -6,7 +6,7 @@ public class IntegerSimpleLinkedList extends SimpleLinkedList<Integer> {
 		return (number & (number - 1)) == 0;
 	}
 
-	public void duplicatePowerOfTwoElements() {
+	public void duplicatePowerOfTwoElementsTask() {
 		ListItem currentNode = head;
 		while (currentNode != null) {
 			boolean added = false;

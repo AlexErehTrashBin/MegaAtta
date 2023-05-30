@@ -5,15 +5,15 @@ public class LinkedListTests {
 		IntegerSimpleLinkedList list = new IntegerSimpleLinkedList();
 		list.addLast(2, 3, 4, 5);
 		System.out.println(list);
-		list.duplicatePowerOfTwoElements();
+		list.duplicatePowerOfTwoElementsTask();
 		System.out.println(list);
-		list.removeElement(2);
+		list.removeElementTask(2);
 		System.out.println(list);
-		list.removeElement(4);
+		list.removeElementTask(4);
 		System.out.println(list);
 
-		list.removeElement(3);
-		list.removeElement(5);
+		list.removeElementTask(3);
+		list.removeElementTask(5);
 		System.out.println(list);
 	}
 }

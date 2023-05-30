@@ -129,7 +129,7 @@ public class SimpleLinkedList<T> implements Iterable<T> {
 	/**
 	 * Метод, который удаляет подряд идущие дубликаты из списка.
 	 * */
-	public void deleteDuplicates() {
+	public void deleteDuplicatesTask() {
 		if (head == null) return;
 
 		ListItem current = head;
@@ -158,7 +158,7 @@ public class SimpleLinkedList<T> implements Iterable<T> {
 	/**
 	 * Метод, который удаляет каждый k-ый элемент из списка.
 	 * */
-	public void deleteEveryKthElement(int k){
+	public void deleteEveryKthElementTask(int k){
 		if (k <= 0) {
 			return;
 		}
@@ -202,7 +202,7 @@ public class SimpleLinkedList<T> implements Iterable<T> {
 	 * Необходимо описать метод для данного списка,
 	 * который удаляет из него все элементы с указанным значением.
 	 * */
-	public void removeElement(T valueToDelete) {
+	public void removeElementTask(T valueToDelete) {
 		ListItem currentNode = head;
 		ListItem previousNode = null;
 
