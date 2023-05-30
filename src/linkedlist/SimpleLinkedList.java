@@ -4,9 +4,9 @@ import java.util.Iterator;
 
 @SuppressWarnings("unused")
 public class SimpleLinkedList<T> implements Iterable<T> {
-	private ListItem head = null;
-	private ListItem tail = null;
-	private int size = 0;
+	protected ListItem head = null;
+	protected ListItem tail = null;
+	protected int size = 0;
 
 	public SimpleLinkedList() {
 	}
