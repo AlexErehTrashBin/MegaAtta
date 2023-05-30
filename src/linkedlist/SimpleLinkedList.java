@@ -196,6 +196,34 @@ public class SimpleLinkedList<T> implements Iterable<T> {
 
 	}
 
+	/**
+	 * Какой-то похоже Соломатинский таск найденный в интернете:
+	 * <p>
+	 * Необходимо описать метод для данного списка,
+	 * который удаляет из него все элементы с указанным значением.
+	 * */
+	public void removeElement(T valueToDelete) {
+		ListItem currentNode = head;
+		ListItem previousNode = null;
+
+		while (currentNode != null) {
+			if (currentNode.value.equals(valueToDelete)) { // если значение элемента равно заданному значению
+				if (previousNode == null) { // если удаляемый элемент первый в списке
+					head = currentNode.next; // перемещаем head на следующий элемент списка
+				} else {
+					previousNode.next = currentNode.next; // удаляем текущий элемент, связывая предыдущий и следующий элементы
+				}
+				size--; // уменьшаем размер списка
+				if (currentNode.next == null) {
+					tail = previousNode; // если удалили последний элемент, то присваиваем tail предыдущему элементу
+				}
+			} else {
+				previousNode = currentNode; // если значение элемента не равно заданному значению, то переходим к следующему узлу
+			}
+			currentNode = currentNode.next; // переходим к следующему узлу
+		}
+	}
+
 	@Override
 	public Iterator<T> iterator() {
 		class LinkedListIterator implements Iterator<T> {
