@@ -6,13 +6,6 @@ public class IntegerSimpleLinkedList extends SimpleLinkedList<Integer> {
 		return (number & (number - 1)) == 0;
 	}
 
-	public static void main(String[] args) {
-		IntegerSimpleLinkedList list = new IntegerSimpleLinkedList();
-		list.addLast(2, 3, 4, 5);
-		list.duplicatePowerOfTwoElements();
-		System.out.println(list);
-	}
-
 	public void duplicatePowerOfTwoElements() {
 		ListItem currentNode = head;
 		while (currentNode != null) {
